@@ -1,6 +1,7 @@
 import { Component } from "react";
 import PokemonForm from "./PokemonForm";
-import {ToastContainer} from 'react-toastify'
+import PokemonInfo from "./PokemonInfo";
+// import {ToastContainer} from 'react-toastify'
 
 export default class App extends Component{
   state = {
@@ -19,7 +20,8 @@ export default class App extends Component{
       }}
       >
         <PokemonForm getName={this.handleFormSubmit} />
-        <ToastContainer autoClose={3000}/>
+        <PokemonInfo pokemonName={ this.state.pokemonName}/>
+        {/* <ToastContainer autoClose={3000}/> */}
     </div>
   );
 }

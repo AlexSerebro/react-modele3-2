@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { ImSearch } from 'react-icons/im'
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 
 const style = { form: { marginBotton: 20 } };
 
