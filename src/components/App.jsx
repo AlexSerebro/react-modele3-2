@@ -1,16 +1,26 @@
-export const App = () => {
-  return (
+import { Component } from "react";
+import PokemonForm from "./PokemonForm";
+import {ToastContainer} from 'react-toastify'
+
+export default class App extends Component{
+  state = {
+    pokemonName:''
+  }
+
+  handleFormSubmit = pokemonName => {
+    this.setState({pokemonName})
+  }
+
+  render() {
+    return (
     <div
       style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
+        maxWidth:1170, margin:'0 auto', padding:0
       }}
-    >
-      React homework template
+      >
+        <PokemonForm getName={this.handleFormSubmit} />
+        <ToastContainer autoClose={3000}/>
     </div>
   );
+}
 };
