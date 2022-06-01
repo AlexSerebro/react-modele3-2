@@ -2,8 +2,7 @@ import { Component } from "react";
 import PokemonFallbackView from "./PokemonErrorView";
 import PokemonDataView from "./PokemonDataView";
 import PokemonPendingView from "./PokemonPendingView";
-import api from '../services/ServicesApi'
-
+import api from '../services/ServicesApi';
 
 export default class PokemonInfo extends Component{
   state = {
