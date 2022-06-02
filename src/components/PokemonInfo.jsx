@@ -12,6 +12,7 @@ export default class PokemonInfo extends Component{
     status: 'idle',
   }
 
+
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.pokemonName !== this.props.pokemonName) {
       this.setState({ status: 'pending'});
@@ -19,7 +20,7 @@ export default class PokemonInfo extends Component{
       api.fetchPokemonName(this.props.pokemonName)
         .then(pokemon => this.setState({ pokemon , status: 'resolved'}))
         .catch(error => this.setState({ error, status:'rejected' }))
-        // .finally(this.setState({ loading: false }))
+        .finally(this.setState({ loading: false }))
    }
  }
 
